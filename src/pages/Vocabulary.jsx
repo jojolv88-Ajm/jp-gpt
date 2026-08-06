@@ -1,11 +1,83 @@
+import { useState } from "react";
+
 export default function Vocabulary() {
+
+  const words = [
+  {
+    jp: "経験",
+    kana: "けいけん",
+    zh: "經驗",
+    level: "N4",
+    example: "日本で働いた経験があります。",
+    exampleZh: "我有在日本工作的經驗。"
+  },
+
+  {
+    jp: "改善",
+    kana: "かいぜん",
+    zh: "改善",
+    level: "N4",
+    example: "品質を改善します。",
+    exampleZh: "改善品質。"
+  },
+
+  {
+    jp: "必要",
+    kana: "ひつよう",
+    zh: "必要",
+    level: "N4",
+    example: "時間が必要です。",
+    exampleZh: "需要時間。"
+  },
+
+  {
+    jp: "連絡",
+    kana: "れんらく",
+    zh: "聯絡",
+    level: "N4",
+    example: "後で連絡します。",
+    exampleZh: "之後再聯絡。"
+  },
+
+  {
+    jp: "準備",
+    kana: "じゅんび",
+    zh: "準備",
+    level: "N4",
+    example: "旅行の準備をします。",
+    exampleZh: "準備旅行。"
+  }
+];
+
+  const [index, setIndex] = useState(0);
+
   return (
     <div>
+
       <h1>📖 今日單字</h1>
 
-      <p>這裡以後會顯示今天的單字。</p>
+      <h2>{words[index].jp}</h2>
 
-      <button>下一個單字</button>
+      <h3>（{words[index].kana}）</h3>
+
+      <p>{words[index].zh}</p>
+
+      <p>JLPT：{words[index].level}</p>
+
+      <p>例句：</p>
+
+      <p>{words[index].example}</p>
+
+      <p>{words[index].exampleZh}</p>
+
+      <button
+        onClick={() =>
+          setIndex((index + 1) % words.length)
+        }
+      >
+        下一個單字
+      </button>
+
     </div>
   );
 }

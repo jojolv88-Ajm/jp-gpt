@@ -10,7 +10,7 @@ function App() {
     <>
       {page === "login" && <Login setPage={setPage} />}
       {page === "home" && <Home setPage={setPage} />}
-{page === "vocabulary" && <Vocabulary />}
+      {page === "vocabulary" && <Vocabulary />}
     </>
   );
 }
