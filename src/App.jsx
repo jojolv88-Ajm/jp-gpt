@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
+import Vocabulary from "./pages/Vocabulary";
 
 function App() {
   const [page, setPage] = useState("login");
@@ -8,7 +9,8 @@ function App() {
   return (
     <>
       {page === "login" && <Login setPage={setPage} />}
-      {page === "home" && <Home />}
+      {page === "home" && <Home setPage={setPage} />}
+{page === "vocabulary" && <Vocabulary />}
     </>
   );
 }
