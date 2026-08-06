@@ -2,7 +2,34 @@ import { useState } from "react";
 
 export default function Vocabulary() {
 
-  const words = [
+  const wordsN5 = [
+  {
+    jp: "食べる",
+    kana: "たべる",
+    zh: "吃",
+    level: "N5",
+    example: "ご飯を食べます。",
+    exampleZh: "吃飯。"
+  },
+  {
+    jp: "行く",
+    kana: "いく",
+    zh: "去",
+    level: "N5",
+    example: "学校へ行きます。",
+    exampleZh: "去學校。"
+  },
+  {
+    jp: "飲む",
+    kana: "のむ",
+    zh: "喝",
+    level: "N5",
+    example: "水を飲みます。",
+    exampleZh: "喝水。"
+  }
+];
+  
+  const wordsN4 = [
   {
     jp: "経験",
     kana: "けいけん",
@@ -48,6 +75,10 @@ export default function Vocabulary() {
     exampleZh: "準備旅行。"
   }
 ];
+
+const level = localStorage.getItem("level");
+
+const words = level === "N5" ? wordsN5 : wordsN4;
 
   const [index, setIndex] = useState(0);
 
