@@ -38,6 +38,16 @@ const wordsN3 = [
     example: "仕事の経験を積みます。",
     exampleZh: "累積工作的經驗。"
   },
+
+{
+  jp: "環境",
+  kana: "かんきょう",
+  zh: "環境",
+  level: "N3",
+  example: "環境を大切にします。",
+  exampleZh: "珍惜環境。"
+},
+
 ];
 
   const wordsN4 = [
