@@ -29,6 +29,17 @@ export default function Vocabulary() {
   }
 ];
   
+const wordsN3 = [
+  {
+    jp: "経験",
+    kana: "けいけん",
+    zh: "經驗",
+    level: "N3",
+    example: "仕事の経験を積みます。",
+    exampleZh: "累積工作的經驗。"
+  },
+];
+
   const wordsN4 = [
   {
     jp: "経験",
@@ -78,7 +89,10 @@ export default function Vocabulary() {
 
 const level = localStorage.getItem("level");
 
-const words = level === "N5" ? wordsN5 : wordsN4;
+const words =
+  level === "N5" ? wordsN5 :
+  level === "N4" ? wordsN4 :
+  wordsN3;
 
   const [index, setIndex] = useState(0);
 
