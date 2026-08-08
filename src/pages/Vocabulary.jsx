@@ -29,6 +29,38 @@ export default function Vocabulary() {
   }
 ];
   
+const wordsN2 = [
+  {
+    jp: "影響",
+    kana: "えいきょう",
+    zh: "影響",
+    level: "N2",
+    example: "環境は健康に影響します。",
+    exampleZh: "環境會影響健康。"
+  },
+
+{
+  jp: "環境",
+  kana: "かんきょう",
+  zh: "環境",
+  level: "N2",
+  example: "環境を大切にします。",
+  exampleZh: "珍惜環境。"
+},
+
+];
+
+const wordsN1 = [
+  {
+    jp: "影響",
+    kana: "えいきょう",
+    zh: "影響",
+    level: "N1",
+    example: "環境が社会に大きな影響を与えます。",
+    exampleZh: "環境會對社會產生很大的影響。"
+  }
+];
+
 const wordsN3 = [
   {
     jp: "経験",
@@ -102,7 +134,9 @@ const level = localStorage.getItem("level");
 const words =
   level === "N5" ? wordsN5 :
   level === "N4" ? wordsN4 :
-  wordsN3;
+   level === "N3" ? wordsN3 :
+    level === "N2" ? wordsN2 :
+  wordsN1;
 
   const [index, setIndex] = useState(0);
 
