@@ -12,7 +12,7 @@ export default function Home({ setPage }) {
 
       <hr />
 
-      <h3>📖 今日單字</h3>
+      <h3>📖 <div className=""></div>今日單字</h3>
       <p>每天學一個新單字</p>
       <button onClick={() => setPage("vocabulary")}>
   開始學習
